@@ -132,4 +132,11 @@ class library_management():
         books = cursor.fetchall()
         for book in books:
             print(f"ID: {book[0]}, Title: {book[1]}, Author: {book[2]}")
+    def close_connection(self):
+        cursor = self.connection.cursor()
+        if self.connection:
+            cursor.close()
+            self.connection.close()
+        
     print("==========================LIBRARY MANAGEMENT SYSTEM======================")
+ 

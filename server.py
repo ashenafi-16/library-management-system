@@ -33,8 +33,8 @@ while True:
 
     elif choice == 6:
         print("=====================================================================\n GOOD BYE!")
+        Library.close_connection()
         exit()
 
     else:
         print("Incorrect input please try again!!")
-connection.close()
