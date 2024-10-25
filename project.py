@@ -10,8 +10,8 @@ class library_management():
             password="password",
             database="library_db"
         )
-        self.connection.cursor().execute("CREATE DATABASE LIBRARY_DB IF NOT EXISTS")
-        self.connection.curosr().execute("use LIBRARY_DB")
+        self.connection.cursor().execute("CREATE DATABASE IF NOT EXISTS LIBRARY_DB")
+        self.connection.cursor().execute("use LIBRARY_DB")
         self.connection.cursor().execute('''CREATE TABLE IF NOT EXISTS Books (
                         book_id INT AUTO_INCREMENT PRIMARY KEY,
                         title VARCHAR(255) NOT NULL,
